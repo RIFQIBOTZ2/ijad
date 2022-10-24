@@ -906,7 +906,31 @@ module.exports = {
                         } finally {
                   text = (action === 'add' ? (chat.sWelcome || this.welcome || conn.welcome || 'Welcome, @user!').replace('@subject', await this.getName(id)).replace('@desc', groupMetadata.desc ? String.fromCharCode(8206).repeat(4001) + groupMetadata.desc : '') :
                                 (chat.sBye || this.bye || conn.bye || 'Bye, @user!')).replace('@user', '@' + user.split('@')[0])
-                                this.sendButtonImg(id, pp, text, "Group Message", `By Unoshop`, "wkwk", null)
+                                this.sendButtonImg(id, pp, text, "Group Message", `WhatsApp Bot\n
+╭──「 *_JADI BOT + OWNER_* 」
+│❏   RP : IDR 20.000 (20K)
+╰────
+╭─ [ FASILITAS ]
+│❏ *ADA FITUR STORE*
+│❏ *ADA FITUR NO INTERNET*
+│ *(JIKA HP/DATA/WIFI KALIAN MATI*
+│  *BOT  TTP NYALA*
+│❏  CUMA SCAN QR DOANG JADI                
+│     BOT + OWNER
+│❏  FITUR BOT NYA BANYAK
+│❏  BANYAK FITUR LANGKA
+│❏  BUKAN BOT WIBUSOFT
+│❏  DI SETTING IN SELLER
+╰────
+╭─[ KEUNTUNGAN ]
+│❏  BISA OPEN SEWA BOT
+│❏  NAMA BOT, NAMA OWNER, NOMOR.OWNER,
+│     DLL DI GANTI JADI TERSERAH LU
+╰────
+╭─[ *MINAT? HUBUNGI NOMOR DI BAWAH* ]
+│❏ wa.me/6285643112659?text=jadi+bot
+╰────
+*_📍 BERGARANSI FULL_*`, "wkwk", null)
                                 }
                     }
                 }

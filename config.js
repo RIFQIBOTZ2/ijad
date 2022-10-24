@@ -1,19 +1,19 @@
 let fs = require('fs') 
 let chalk = require('chalk')
 
-global.namaowner = `unoshop`
-global.namabot = `unoshop`
-global.thumb = 'https://telegra.ph/file/b45f15e5fb8e37692c544.jpg'
+global.namaowner = `Saputra`
+global.namabot = `Hanz bot`
+global.thumb = 'https://telegra.ph/file/18fc8460eaa6936122f3f.jpg'
 
 owner = [
   ['6285643112659'],
-  ['6285234852749'],
-  ['6285234852749', 'unoshop', true]
+  ['6287761594032'],
+  ['6287761594032', 'Saputra', true]
   // [number, dia creator/owner?, dia developer?]
 ] // Put your number here
 
 mods = [] // Want some help?
-prems = ['6285234852749', true] // Premium user has unlimited limit
+prems = ['6287761594032', true] // Premium user has unlimited limit
 
 APIs = { // API Prefix
   // name: 'https://website'
@@ -48,7 +48,7 @@ const spack = fs.readFileSync("lib/exif.json")
 const stickerpack = JSON.parse(spack)
 if (stickerpack.spackname == '') {
   var sticker_name = ''
-  var sticker_author = 'Rifqi Botz'
+  var sticker_author = 'Hanz bot'
 } else {
   var sticker_name = stickerpack.spackname
   var sticker_author = stickerpack.sauthor
@@ -65,7 +65,7 @@ fs.watchFile(file_exif, () => {
 // Sticker WM
 packname = sticker_name
 author = sticker_author
-wm = '© Rifqi Botz'
+wm = '© Hanz bot'
 
 Intervalmsg = 1800 //detik
 
