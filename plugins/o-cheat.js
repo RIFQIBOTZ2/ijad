@@ -7,7 +7,7 @@ let handler  = async (m, { conn, command, args, usedPrefix:p, isOwner, DevMode }
     let mentionedJid = [who]
     let cok = `
 *[ LIST CHEAT  ]*
-• Exp\n• Level\n• Limit
+• Exp\n• Level\n• Limit\n• Money
 • ${p}cheat exp 10 @628123456789
 `.trim()
 try {
@@ -27,6 +27,11 @@ break                       // Perhatian Cheat exp bisa membuat database kalian 
                 case 'limit':
                             if (typeof db.data.users[who] == 'undefined') throw 'Pengguna tidak ada didalam database'
                             db.data.users[who].limit += count * 1
+                            conn.reply(m.chat, `Berhasil menambahkan ${count * 1} ${type} kedalam database target`, m)
+break
+case 'money':
+                            if (typeof db.data.users[who] == 'undefined') throw 'Pengguna tidak ada didalam database'
+                            db.data.users[who].money += count * 1
                             conn.reply(m.chat, `Berhasil menambahkan ${count * 1} ${type} kedalam database target`, m)
 break
                 default:
