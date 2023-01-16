@@ -1,19 +1,49 @@
-FROM node:lts-buster
+FROM node:16.13.0
+
+
 
 RUN apt-get update && \
+
   apt-get install -y \
+
+  neofetch \
+
   ffmpeg \
-  imagemagick \
-  webp && \
-  apt-get upgrade -y && \
+
+  webp \
+
+  wget \
+
+  chromium \ 
+
+  imagemagick && \
+
   rm -rf /var/lib/apt/lists/*
+
+
 
 COPY package.json .
 
-RUN npm install && npm install qrcode-terminal && npm install pm2 -g 
+RUN npm install -g npm@latest
+
+RUN npm install 
+
+RUN npm instal pm2 -g
+
+
+
+
+
+ENV PM2_PUBLIC_KEY r5nhytflswo1ly3
+
+ENV PM2_SECRET_KEY cygkc3bz1dww20f
+
+
 
 COPY . .
 
 EXPOSE 5000
 
-CMD ["node", "index.js"]
+
+
+CMD ["pm2-runtime", "main.js"]`
